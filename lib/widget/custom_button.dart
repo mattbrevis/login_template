@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MyCustomButton {
-  MyCustomButton._internal();
+  MyCustomButton._();
 
-  static final MyCustomButton _instance = MyCustomButton._internal();
+  static final MyCustomButton _instance = MyCustomButton._();
 
   static MyCustomButton get instance => _instance;
 
