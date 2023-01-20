@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../models/usuario_model.dart';
+import '../../models/user_model.dart';
 import '../../widget/custom_input.dart';
 import 'home_page.dart';
 import 'signup_page.dart';
@@ -16,7 +16,7 @@ class LoginPageState extends State<LoginPage> {
   var passwordController = TextEditingController();
   bool sending = false;
   bool isChecked = false;
-  var userLogin = UsuarioModel();
+  var userLogin = UserModel(name: '', password: '', email: '');
 
   Widget createAccountButton(BuildContext context) {
     return SizedBox(
