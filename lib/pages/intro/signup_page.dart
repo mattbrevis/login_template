@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../widget/custom_button.dart';
@@ -40,28 +39,23 @@ class SignUpPageState extends State<SignUpPage> {
     );
   }
 
-
-  Widget _submitButton() {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.5,
-      height: MediaQuery.of(context).size.height * 0.05,
-      child: ElevatedButton(
-          style: MyCustomButton().myCustomButtonStyle(),
-          child: const Text(
-            'Register',
-            style: TextStyle(color: Colors.white, fontSize: 18.0),
-          ),
-          onPressed: () {}),
-    );
-  }
-
-
   Widget _emailPasswordWidget() {
     return Column(
       children: <Widget>[
-        MyCustomInput(title: 'Name', isPassword: false, controller: nameTextController),
-        MyCustomInput(title: 'E-mail', isPassword: false, controller: emailTextController),
-        MyCustomInput(title: 'Password', isPassword: true, controller: passwordTextController),       
+        MyCustomInput(
+            title: 'Name', isPassword: false, controller: nameTextController),
+        MyCustomInput(
+            title: 'E-mail',
+            isPassword: false,
+            controller: emailTextController),
+        MyCustomInput(
+            title: 'Password',
+            isPassword: true,
+            controller: passwordTextController),
+        MyCustomInput(
+            title: 'Confirm your password',
+            isPassword: true,
+            controller: passwordTextController),
       ],
     );
   }
@@ -73,7 +67,7 @@ class SignUpPageState extends State<SignUpPage> {
       body: SizedBox(
         height: height,
         child: Stack(
-          children: <Widget>[         
+          children: <Widget>[
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: SingleChildScrollView(
@@ -82,17 +76,31 @@ class SignUpPageState extends State<SignUpPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     SizedBox(height: height * .2),
-                   
                     const SizedBox(
-                      height: 50,
+                      height: 10,
+                    ),
+                    const Text(
+                      'Sign in :)',
+                      style: TextStyle(fontSize: 35),
+                      textAlign: TextAlign.right,
                     ),
                     _emailPasswordWidget(),
                     const SizedBox(
                       height: 20,
                     ),
-                    _submitButton(),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.7,
+                      height: MediaQuery.of(context).size.height * 0.05,
+                      child: ElevatedButton(
+                          onPressed: () {},
+                          style: MyCustomButton.myCustomButtonStyle(),
+                          child: const Text(
+                            'Register',
+                            style: TextStyle(
+                                color: Colors.white, fontSize: 18.0),
+                          )),
+                    ),
                     SizedBox(height: height * .14),
-                    
                   ],
                 ),
               ),
