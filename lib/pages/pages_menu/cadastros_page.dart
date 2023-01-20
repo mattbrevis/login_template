@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
 
 
-class CadastrosPage extends StatefulWidget {
-  const CadastrosPage({Key? key}) : super(key: key);
-  static const String routeName = '/cadastros';
+class CrudPage extends StatefulWidget {
+  const CrudPage({Key? key}) : super(key: key);
+  static const String routeName = '/crud';
   @override
-  CadastrosPageState createState() => CadastrosPageState();
+  CrudPageState createState() => CrudPageState();
 }
 
-class CadastrosPageState extends State<CadastrosPage> {
+class CrudPageState extends State<CrudPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Cadastros'),
-      ),      
-      body: Container(),
-    );
+    return const Center(child: Text('Page two'),);
   }
 }
